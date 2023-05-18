@@ -1,12 +1,3 @@
-library(tidyverse)
-library(ggplot2)
-library(ggrepel)
-library(httr)
-url <- "https://github.com/Shenshulin/shiny_BSMDB/tree/main/app_mdb/met_inf.csv"
-response <- GET(url)
-data <- content(response, "text")
-# 定义UI界面
-met <- read.csv(text = data) # 添加文件路径参数，并禁用字符串因子
 ui <- fluidPage(
   # 输入框和搜索按钮
   sidebarLayout(
