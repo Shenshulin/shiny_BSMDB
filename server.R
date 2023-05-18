@@ -13,7 +13,7 @@ server <- function(input, output) {
       search_result(result)
       
       # 绘制ms2图
-      file_path <- paste0("https://github.com/Shenshulin/shiny_BSMDB/tree/main/app_mdb/ms2/", result$Code, ".csv")
+      file_path <- paste0("https://raw.githubusercontent.com/Shenshulin/shiny_BSMDB/main/app_mdb/ms2/", result$Code, ".csv")
       if (file.exists(file_path)) {
         new_data <- read.csv(file_path)
         p <- ggplot(new_data, aes(x = x, y = y)) + 
