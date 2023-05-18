@@ -1,6 +1,5 @@
 server <- function(input, output) {
-  file_path_met <- paste0("https://github.com/Shenshulin/shiny_BSMDB/tree/main/app_mdb/met_inf.csv")
-  met <- read.csv(file_path_met)
+  
   # 定义响应式变量，用于存储搜索结果和柱形图
   search_result <- reactiveVal(met)
   bar_plot <- reactiveVal()
