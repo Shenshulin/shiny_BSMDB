@@ -1,3 +1,5 @@
+li
+
 met <- read.csv("https://raw.githubusercontent.com/Shenshulin/shiny_BSMDB/main/app_mdb/met_inf.csv")
 server <- function(input, output) {
   # 定义响应式变量，用于存储搜索结果和柱形图
