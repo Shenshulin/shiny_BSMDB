@@ -10,8 +10,7 @@ ui <- fluidPage(
       tabsetPanel(
         tabPanel("查询结果", tableOutput("result_table")),
         tabPanel("ms2图", plotOutput("ms2_plot")),
-        tabPanel("含量柱形图", plotOutput("bar_plot")),
-        tabPanel("化学式", imageOutput("image_output"))
+        tabPanel("含量柱形图", plotOutput("bar_plot"))
       )
     )
   )
