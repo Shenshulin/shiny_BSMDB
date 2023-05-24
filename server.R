@@ -67,16 +67,4 @@ server <- function(input, output) {
     bar_plot()
   })
   
-  # 显示图片
-  output$image_output <- renderImage({
-    result <- search_result()
-    if (!is.null(result)) {
-      file_path <- paste0("https://github.com/Shenshulin/shiny_BSMDB/tree/main/app_mdb/images/", result$Code, ".png")
-      if (file.exists(file_path)) {
-        list(src = file_path, contentType = "image/png", width = "50%")
-      } else {
-        NULL
-      }
-    }
-  }, deleteFile = FALSE)
 }
